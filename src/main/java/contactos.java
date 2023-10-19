@@ -1,6 +1,6 @@
-package Ejercicio2;
+import java.io.Serializable;
 
-public class contactos {
+public class contactos implements Serializable {
     private String nombre;
     private String apellido;
     private String email;
