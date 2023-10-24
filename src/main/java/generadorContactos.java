@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class generadorContactos {
     public static void main(String[] args) {
@@ -11,22 +12,49 @@ public class generadorContactos {
         agregarApellidos(apellidos);
         agregarEmail(email);
 
-        List<contactos> listaContactos = generarContactos(nombres, apellidos, email);
-        for (contactos cont : listaContactos) {
+        List<Contacto> listaContactos = generarContactos(nombres, apellidos, email);
+        for (Contacto cont : listaContactos) {
             System.out.println(cont);
         }
     }
 
     private static void agregarNombres(List<String> nombres) {
+        nombres.add("Jose Maria");
+        nombres.add("Jaime");
+        nombres.add("Sara");
+        nombres.add("Jose Maria");
+        nombres.add("Juana");
     }
 
     private static void agregarApellidos(List<String> apellidos) {
+        apellidos.add("Gomez");
+        apellidos.add("Gomez");
+        apellidos.add("Gomez");
+        apellidos.add("Sanchez");
+        apellidos.add("Jimenez");
     }
 
     private static void agregarEmail(List<String> email) {
+        email.add("@gmail.com");
+        email.add("@gmail.com");
+        email.add("@hotmail.com");
+        email.add("@hotmail.com");
+        email.add("@gmail.com");
     }
 
-    private static List<contactos> generarContactos(List<String> nombres, List<String> apellidos, List<String> email) {
-        return null;
+    private static List<Contacto> generarContactos(List<String> nombres, List<String> apellidos, List<String> dominios) {
+        List<Contacto> contAleatorios = new ArrayList<>();
+        Random rd = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            String nombre = nombres.get(rd.nextInt(nombres.size()));
+            String apellido = apellidos.get(rd.nextInt(apellidos.size()));
+            String dominio = dominios.get(rd.nextInt(dominios.size()));
+            String email = nombre.substring(0, 1).toLowerCase() + apellido.toLowerCase() + "@" + dominio;
+
+            Contacto contacto = new Contacto(nombre, apellido, email);
+            contAleatorios.add(contacto);
+        }
+        return contAleatorios;
     }
 }

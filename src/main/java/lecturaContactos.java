@@ -6,22 +6,22 @@ import java.util.List;
 
 public class lecturaContactos {
     public static void main(String[] args) {
-        String archivo = "contactos.csv";
-        List<contactos> lista = new ArrayList<>();
+        String archivo = "Contacto.csv";
+        List<Contacto> lista = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String linea;
-            System.out.println("Lista de contactos");
+            System.out.println("Lista de Contacto");
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(",");
                 if (datos.length == 3) {
                     String nombre = datos[0].trim();
                     String apellido = datos[1].trim();
                     String email = datos[2].trim();
-                    contactos contac = new contactos(nombre, apellido, email);
+                    Contacto contac = new Contacto(nombre, apellido, email);
                     lista.add(contac);
                 }
             }
-            for (contactos contact : lista) {
+            for (Contacto contact : lista) {
                 System.out.println(contact);
             }
         } catch (IOException ex) {

@@ -1,14 +1,14 @@
 import java.io.Serializable;
 
-public class contactos implements Serializable {
+public class Contacto implements Serializable {
     private String nombre;
     private String apellido;
     private String email;
 
-    public contactos() {
+    public Contacto() {
     }
 
-    public contactos(String nombre, String apellido, String email) {
+    public Contacto(String nombre, String apellido, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;

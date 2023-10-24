@@ -4,35 +4,35 @@ import java.util.List;
 
 public class serializacionContactos {
     public static void main(String[] args) {
-        List<contactos> lista = new ArrayList<>();
-        lista.add(new contactos("jose maria", "gomez", "josemagomez53@gmail.com"));
-        lista.add(new contactos("jaime", "gomez", "jaimegomez53@gmail.com"));
-        lista.add(new contactos("sara", "gomez", "saragomez53@gmail.com"));
-        lista.add(new contactos("jose maria", "gomez", "j.m.g.s.a.delojanco@hotmail.com"));
-        lista.add(new contactos("juana", "liñan", "juana.lije@gmail.com"));
+        List<Contacto> lista = new ArrayList<>();
+        lista.add(new Contacto("jose maria", "gomez", "josemagomez53@gmail.com"));
+        lista.add(new Contacto("jaime", "gomez", "jaimegomez53@gmail.com"));
+        lista.add(new Contacto("sara", "gomez", "saragomez53@gmail.com"));
+        lista.add(new Contacto("jose maria", "gomez", "j.m.g.s.a.delojanco@hotmail.com"));
+        lista.add(new Contacto("juana", "liñan", "juana.lije@gmail.com"));
 
         serializarContactos(lista);
-        List<contactos> listaDeserializados = deserializarContactos();
+        List<Contacto> listaDeserializados = deserializarContactos();
 
-        System.out.println("Lista contactos");
-        for (contactos cont : listaDeserializados) {
+        System.out.println("Lista Contacto");
+        for (Contacto cont : listaDeserializados) {
             System.out.println(cont);
         }
     }
 
-    private static void serializarContactos(List<contactos> listaContactos) {
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("contactos.dat"))) {
+    private static void serializarContactos(List<Contacto> listaContactos) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("Contacto.dat"))) {
             out.writeObject(listaContactos);
-            System.out.println("Contactos guardados en: " + "contactos.dat");
+            System.out.println("Contactos guardados en: " + "Contacto.dat");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 
-    private static List<contactos> deserializarContactos() {
-        List<contactos> listaDeserializable = new ArrayList<>();
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("contactos.dat"))) {
-            listaDeserializable = (List<contactos>) in.readObject();
+    private static List<Contacto> deserializarContactos() {
+        List<Contacto> listaDeserializable = new ArrayList<>();
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("Contacto.dat"))) {
+            listaDeserializable = (List<Contacto>) in.readObject();
         } catch (IOException | ClassNotFoundException ex) {
             ex.printStackTrace();
         }
