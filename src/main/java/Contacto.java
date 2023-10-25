@@ -1,5 +1,11 @@
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
 import java.io.Serializable;
 
+@XmlRootElement(name = "contacto")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Contacto implements Serializable {
     private String nombre;
     private String apellido;
