@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lista_contactos>
+    <contacto>
+        <nombre>Jose maria</nombre>
+        <apellido>Gomez</apellido>
+        <email>josemagomez53@gmail.com</email>
+    </contacto>
+    <contacto>
+        <nombre>Jaime</nombre>
+        <apellido>Gomez</apellido>
+        <email>jaimelinan@gmail.com</email>
+    </contacto>
+    <contacto>
+        <nombre>Sara</nombre>
+        <apellido>Gomez</apellido>
+        <email>scorpio28octubre@gmail.com</email>
+    </contacto>
+</lista_contactos>
