@@ -22,24 +22,18 @@ public class generadorContactos {
         nombres.add("Jose Maria");
         nombres.add("Jaime");
         nombres.add("Sara");
-        nombres.add("Jose Maria");
-        nombres.add("Juana");
     }
 
     private static void agregarApellidos(List<String> apellidos) {
-        apellidos.add("Gomez");
-        apellidos.add("Gomez");
         apellidos.add("Gomez");
         apellidos.add("Sanchez");
         apellidos.add("Jimenez");
     }
 
     private static void agregarEmail(List<String> email) {
-        email.add("@gmail.com");
-        email.add("@gmail.com");
-        email.add("@hotmail.com");
-        email.add("@hotmail.com");
-        email.add("@gmail.com");
+        email.add("gmail.com");
+        email.add("hotmail.com");
+        email.add("yahoo.com");
     }
 
     private static List<Contacto> generarContactos(List<String> nombres, List<String> apellidos, List<String> dominios) {

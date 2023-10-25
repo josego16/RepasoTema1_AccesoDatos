@@ -14,7 +14,7 @@ public class serializacionContactos {
         serializarContactos(lista);
         List<Contacto> listaDeserializados = deserializarContactos();
 
-        System.out.println("Lista Contacto");
+        System.out.println("Lista de Contactos: ");
         for (Contacto cont : listaDeserializados) {
             System.out.println(cont);
         }

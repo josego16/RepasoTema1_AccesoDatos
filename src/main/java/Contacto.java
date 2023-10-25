@@ -40,6 +40,6 @@ public class Contacto implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("Nombre %s, Apellido %s, Email %s", nombre, apellido, email);
+        return String.format("Nombre: %s, Apellido :%s, Email: %s", nombre, apellido, email);
     }
 }
